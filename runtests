@@ -1,0 +1,16 @@
+failures=$((0))
+for i in test*.c; do
+ f=${i%.c}
+ ./$f > $f.out
+ if [ $? -ne 0 ]; then
+   echo === $f failed
+   failures=$((failures+1))
+ else
+   if [ -f $f.ref ]; then
+     diff $f.ref $f.out || failures=$((failures+1))
+   else
+     cp $f.out $f.ref
+   fi
+ fi
+done
+exit $failures
