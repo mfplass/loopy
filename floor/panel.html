@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<style type="text/css">
+.post {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+circle.wire {
+  stroke: none;
+}
+line.wire {
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+line.pins {
+  stroke-width: 5px;
+  stroke-linecap: square;
+  stroke: #999;
+}
+path.dippath {
+  stroke-width: 1px;
+  stroke: #777;
+  fill: #aaa;
+}
+.rowtag {
+  font-family: sans-serif;
+  fill: #c33;
+  font-size: 10pt;
+  text-anchor: middle;
+}
+.diptext {
+  font-family: sans-serif;
+  fill: #dfd;
+  font-size: 11pt;
+}
+g.component {
+  font-family: sans-serif;
+  font-size: 6pt;
+}
+</style>
+
+<script src="d3.v3.min.js"
+        type="text/javascript" charset="utf-8">
+</script>
+<title>panel</title>
+</head>
+<body>
+<noscript>Oops, no javascript.</noscript>
+<script type="text/javascript">
+var width = 1280 + 40;
+var height = 740;
+var nwires = 10;
+var svg = d3.select("body").append("svg")
+	.attr("width", width).attr("height", height)
+	.style('border', '1px solid black');
+function rcoord() {return Math.floor(200 + Math.random()*(300));}
+function homex(d, i) {
+	d.wire = Math.floor(i / 5);
+	d.col = Math.floor(i / (5 * 47));
+	d.bank = Math.floor(d.col / 2);
+	d.row = d.wire % 47;
+	d.x = 30 + 10 * (i % 5 + 7 * d.col + 2 * d.bank);
+	d.y = 50 + 10 * d.row;
+	return d.x;
+}
+function homey(d, i) {return d.y}
+function postidfromcoords(x, y) {
+    var X, Y, k, u;
+    if (x % 10 == 0 && y % 10 == 0) {
+        X = (x - 30) / 10;
+        Y = (y - 50) / 10;
+        if (0 <= Y && Y < 47) {
+            k = (X + 16) % 16;
+            u = Math.floor(X / 16) + 9;
+            if (k < 5)
+                return('B' + u + "jihgf"[k] + (Y + 1));
+            else if (k < 7) {
+                // in the gap, fall thru
+            }
+            else if (k < 12)
+                return('B' + u + "edcba"[k-7] + (Y + 1));
+            else if (k == 12)
+                return("Vcc")
+            else if (k == 15)
+                return("GND")            
+        }
+    }
+    return('');
+}
+var dat = [];
+for (var i = 0; i < 47 * 10 * 2; i++)
+	dat.push({});
+	svg.selectAll(".post").data(dat).enter().append("circle")
+	.attr("class", "post")
+	.attr("r",3.8)
+//	.attr("cx",rcoord).attr("cy",rcoord)
+//	.transition().delay(200).duration(4000)
+	.attr("cx", homex).attr("cy", homey);
+
+/* Add some handy labels */
+var rowtags = [];
+for (var x = 85 + 1280/16; x < 1280 / 8 * 3 ; x += 1280/8)
+	for (var i = 1; i <= 47; i += 5 - i % 5)
+		rowtags.push({tag: i, x: x + (i < 10 ? 5 : 0), y: 5 + 50 + 10 * (i-1)});
+d3.select("svg").selectAll("text")
+	.data(rowtags).enter().append("text")
+	.attr("class", "rowtag")
+	.text(function(d){return d.tag})
+	.attr("x",666).attr("y",-60)
+	.transition().delay(1000).duration(1000)
+	.attr("x",function(d){return d.x}).attr("y", homey);
+
+var wires = [];
+var dips = [];
+var nodes = []; /* wires and dips */
+var links = [];
+var comps = [];
+var fences = [];
+var newrows = [];
+var fenced = [];
+function infence(d) {
+    if (fences.length) {
+        var f = fences[0];
+        return (f.source.fixed && f.target.fixed &&
+                d.x >= Math.min(f.source.x, f.target.x) &&
+                d.x <= Math.max(f.source.x, f.target.x) &&
+                d.y >= Math.min(f.source.y, f.target.y) &&
+                d.y <= Math.max(f.source.y, f.target.y));
+    }
+    return(false);
+}
+function sqr(x) {
+	x = +x;
+	return x*x;
+}
+var idtable = {};
+function importcsv(error, rows) {
+	for (var i in rows) {
+		var row = rows[i];
+        if (row.label) {
+            while (idtable[row.label])
+                row.label = '' + row.label + Math.floor(Math.random()*10);
+            idtable[row.label] = row.label;
+        }
+		if (row.pkg == "wire" && !loose) {
+			var o = {x:+row.x1, y:+row.y1, pkg:row.pkg, color: row.color};
+			var p = o;
+            var r = row;
+			wires.push(o);
+            nodes.push(o);
+			var d = Math.sqrt(sqr(row.x1-row.x2)+sqr(row.y1-row.y2));
+			var n = Math.sqrt(d + 1) - 1;
+			for (var j = 0; j < n; j += 5) {
+				var q = {x:+row.x2, y:+row.y2, pkg:row.pkg, color: row.color};
+				wires.push(q);
+                nodes.push(q);
+                if (!r) r = {color:row.color};
+                r.source = p;
+                r.target = q;
+				links.push(r);
+                r = null;
+				p = q;
+	 		}
+			o.other = p;
+			p.other = o;
+			o.fixed = p.fixed = !loose;
+		}
+        else if (row.pkg == "dip") {
+            dips.push(row);
+            nodes.push(row);
+            row.x = +row.x1;
+            row.y = +row.y1;
+            row.fixed = !loose;
+            row.tray = loose;
+		}
+        else if (row.pkg) {
+            var p = {x:+row.x1, y:+row.y1, pkg:row.pkg, color: row.color};
+            var q = {x:+row.x2, y:+row.y2, pkg:row.pkg, color: row.color};
+            row.source = p;
+            row.target = q;
+            wires.push(p); nodes.push(p);
+            wires.push(q); nodes.push(q);
+            links.push(row);
+            q.other = p;
+			p.other = q;
+			q.fixed = p.fixed = !loose;
+            if (loose) {
+                q.dangle = true;
+                q.x = p.x + 60;
+                q.y = p.y + 20 * Math.random();
+                p.clonable = q.clonable = true;
+                p.tray = q.tray = true;
+            }
+            row.distance = 70;
+            if (row.pkg == "fence")
+                fences.push(row), p.clonable = q.clonable = false;
+            else if (row.pkg != "buss" && row.pkg != "wire")
+                comps.push(row);
+        }
+	}
+    if (loose) startforce()
+    else {
+        loose = true;
+        d3.csv("tray.csv", null, importcsv);
+    }
+}
+function dipadd(row, i) {
+    var dip = d3.select('#'+row.label);
+    var n = +row.n;
+    dip.append("title").text(' ' + row.label + ' ' +
+                 row.value + ' ' + row.description + ' ');
+    for (var i = 0; i < n/2; i++) {
+        dip.append("line")
+           .attr("class", "pins")
+           .attr("x1", 0)
+           .attr("y1", +row.y1-row.y2+10*i)
+           .attr("x2", +row.x2-row.x1)
+           .attr("y2", +row.y1-row.y2+10*i);
+    }
+    dip.append("path")
+       .attr("class", "dippath")
+       .attr("d", builddippath(row));
+    var cx = (+row.x2 - row.x1) / 2;
+    var cy = +row.n/2*5;
+    dip.append("text")
+       .attr("class", "diptext")
+       .attr("transform", 'translate(' + cx + ',' + cy + ') ' +
+                          'rotate(90) translate(-5,5)')
+       .attr("text-anchor", "middle")
+       .text(row.value);
+}
+function builddippath(row) {
+	var x0 = 0;
+	var x2 = +row.x2-row.x1;
+	var x1 = x2/2;
+	var y = 0;
+	var n = +row.n;
+	var ans = "";
+	ans += 'M ' +  x0    + ' ' + (y-5) + ' ';
+	ans += 'L ' + (x1-3) + ' ' + (y-5) + ' ';
+	ans += 'C ' + (x1-3) + ' ' + (y-1) + ' '
+                + (x1+3) + ' ' + (y-1) + ' '
+                + (x1+3) + ' ' + (y-5) + ' ';
+	ans += 'L ' +  x2    + ' ' + (y-5) + ' ';
+	ans += 'L ' +  x2    + ' ' + (y+10*n/2-7) + ' ';
+	ans += 'L ' +  x0    + ' ' + (y+10*n/2-7) + ' z';
+	return ans;
+}
+function compadd(row) {
+    if (row.pkg == "resistor")
+        return resistoradd(row);
+    if (row.pkg == "cap")
+        return capacitoradd(row);
+    var comp = d3.select('#'+row.label);
+    comp.append("title").text(' ' + row.label + ' ' + row.value + ' ' +
+                              (row.description || ''));
+    var l = 20;
+    var w = 8;
+    comp.append("rect")
+        .attr("x", -0.5*l)
+        .attr("y", -0.5*w)
+        .attr("width", l)
+        .attr("height", w)
+        .attr("fill", "white")
+        .attr("stroke-width", 1)
+        .attr("stroke", row.color);
+    comp.append("text")
+         .attr("transform", "translate(0,3)")
+         .attr("text-anchor", "middle")
+         .text(row.label || row.value || '');
+}
+function capacitoradd(row) {
+    var comp = d3.select('#'+row.label);
+    comp.append("title").text(' ' + row.label + ' ' + row.value + ' ' +
+                              (row.description || ''));
+    var l = 24;
+    var w = 8;
+    comp.append("ellipse")
+        .attr("rx", l/2)
+        .attr("ry", w/2)
+        .attr("fill", "gold")
+        .attr("stroke-width", 1)
+        .attr("stroke", row.color);
+    comp.append("text")
+         .attr("transform", "translate(0,3)")
+         .attr("text-anchor", "middle")
+         .text(row.label || row.value || '');
+}
+function resistoradd(row) {
+    var comp = d3.select('#'+row.label);
+    comp.append("title").text(' ' + row.label + ' ' + row.value + ' ' +
+                              (row.description || ''));
+    var l = 28;
+    var w = 6;
+    var rcc = ["black", "brown", "red", "orange", "yellow",
+               "green", "blue", "violet", "gray", "white"  ];
+    var bands = [];
+    var r = +row.value;
+    var e = 0;
+    while (r >= 100) {e++; r/=10}
+    r = Math.round(r);
+    bands.push(rcc[Math.floor(r/10)]);
+    bands.push(rcc[r % 10]);
+    bands.push(rcc[e]);
+    bands.push("gold");
+    comp.append("rect")
+        .attr("x", -0.5*l)
+        .attr("y", -0.5*w)
+        .attr("width", l)
+        .attr("height", w)
+        .attr("fill", "#a52");
+    for (var i in bands) {
+        comp.append("rect")
+            .attr("x", -0.5*l+i*l/5+l/10)
+            .attr("y", -0.5*w)
+            .attr("width", (i < 3) ? l/8 : l/12)
+            .attr("height", w)
+            .attr("fill", bands[i]);
+    }
+}
+function dotx(d) {return d.x}
+function doty(d) {return d.y}
+function dotlabel(d) {return d.label}
+function dotcolor(d) {return d.color || "black"}
+function dotstrokecolor(d) {return d.pkg == "fence" ? "none" : (d.color || "black")}
+
+function loosewires() {
+	for (var i = 0; i < nwires; i++) {
+		var n = 1 + Math.floor(-2*Math.log(Math.random()));
+		var o = { y:height - height/5*Math.random(), pkg:"wire"};
+		var p = o;
+		wires.push(o);
+		nodes.push(o);
+		for (var j = 0; j < n; j++) {
+			var q = {y:p.y+Math.random()*30,pkg:"wire"};
+			wires.push(q);
+		nodes.push(q);
+			links.push({source:p,target:q,pkg:"wire"});
+			p = q;
+		}
+		o.other = p;
+		p.other = o;
+	}
+}
+var loose = false;
+d3.csv("panel.csv", null, importcsv);
+var force = null;
+function startforce() {
+	if (!force) {
+        force = d3.layout.force();
+        force.on("tick", tick).on("end", forceend);
+        force.drag().on("dragstart", dragstart).on("dragend", dragend);
+	}
+    force.gravity(0)
+		.charge(function (d) {return (d.tray) ? -10 : -2})
+		.linkDistance(function(d){return d.distance || 5})
+		.size([width, 2*height]);
+	svg.selectAll(".dip")
+      .data(dips).enter().append("g")
+      .attr("class", "dip").attr("id", dotlabel)
+      .attr("transform", function(d){
+                            return 'translate(' + d.x + ',' + d.y + ')'})
+      .each(dipadd)
+      .call(force.drag);
+    svg.selectAll("line.wire")
+	  .data(links).enter().append("line")
+	  .attr("class", "wire")
+	  .attr("stroke", dotstrokecolor);
+    svg.selectAll("rect.fence")
+      .data(fences).enter().append("rect")
+      .attr("class", "fence")
+      .attr("fill", "none")
+      .attr("stroke-width", 3)
+      .attr("stroke", dotcolor);
+    svg.selectAll("g.component")
+	  .data(comps).enter().append("g")
+      .attr("class", "component").attr("id", dotlabel)
+      .each(compadd);
+    svg.selectAll("circle.wire")
+	  .data(wires).enter().append("circle")
+	  .attr("class", "wire")
+	  .attr("fill", "blue")
+	  .attr("cx", function(d){return d.x}).attr("cy", homey)
+	  .call(force.drag);
+    force.nodes(nodes).links(links).start();
+	return(force);
+}
+function tick(e) {
+	var dip = svg.selectAll(".dip");
+    var node = svg.selectAll("circle.wire");
+	var link = svg.selectAll("line.wire");
+    var comp = svg.selectAll("g.component");
+    var fence = svg.selectAll("rect.fence");
+	force.gravity(0);
+    trackfenced();
+    dip.each(adjust);
+    node.each(adjust);
+    dip.attr("transform",
+             function(d) {
+                        var x = 10 * Math.round(+d.x / 10);
+                        var y = 10 * Math.round(+d.y / 10);
+                        d.x2 = +d.x2+x-d.x1;
+                        d.x1 = x;
+                        d.y2 = +d.y2+y-d.y1;
+                        d.y1 = y;
+                        return("translate(" + d.x + ',' + d.y + ")")});
+    node.attr("fill", function(d) {
+                          return noderadius(d) <= 4 ? dotcolor(d) : "blue"; })
+	    .attr("r",  noderadius)
+	    .attr("cx", dotx)
+	    .attr("cy", doty);
+	link.attr("x1", function(d) { return d.source.x; })
+	    .attr("y1", function(d) { return d.source.y; })
+	    .attr("x2", function(d) { return d.target.x; })
+	    .attr("y2", function(d) { return d.target.y; });
+    comp.attr("transform", function(d) {
+        var s = d.source;
+        var t = d.target;
+        var x = (+s.x + t.x)/2;
+        var y = (+s.y + t.y)/2;
+        var a = Math.atan2(+t.y - s.y, +t.x - s.x) * (180/Math.PI);
+        return "translate(" + x + ',' + y + ") rotate(" + a + ")"});
+	fence.attr("x", function(d) { return Math.min(d.source.x, d.target.x) - 4 })
+        .attr("y", function(d) { return Math.min(d.source.y, d.target.y) - 4 })
+        .attr("width", function(d) { return Math.abs(d.source.x-d.target.x) + 8 })
+        .attr("height", function(d) { return Math.abs(d.source.y-d.target.y) + 8 });
+}
+function forceend(e) {
+    var rows = newrows;
+    if (loose && rows.length) {
+        newrows = [];
+        importcsv(null, rows);
+        force.alpha(0.0056);
+    }
+}
+function noderadius(d) {
+    return d.weight == 2 ? 1 : d.fixed ? 3 : 5;
+}
+function trackfenced() {
+    if (fenced.length) {
+        var d = fenced[0];
+        for (var i in fenced) {
+            var p = fenced[i];
+            p.x = p.px = d.x + p.fdx;
+            p.y = p.py = d.y + p.fdy; 
+        }
+    }
+}
+function adjust(d) {
+	if (d.fixed) return;
+    if (!(isFinite(d.x) && isFinite(d.y) && isFinite(d.py))) {
+        /* dunno why this happens, but patch it up */
+        d.debug = [d.x, d.y, d.px, d.py];
+        oops = d;
+        if (isFinite(d.px) && isFinite(d.py)) {
+            d.x = d.px;
+            d.y = d.py;
+        }
+        else {
+            // console.log([d, d.other]);
+            d.px = d.x = (Math.random() + 1)/3 * width;
+            d.py = d.y = (Math.random() + 1)/3 * height;
+            return;
+        }
+    }
+	var a = Math.sqrt(force.alpha());
+	var b = 1-a;
+    if (d.x < 5)
+        d.px = d.x - 6;
+    else if (d.x > width - 5)
+        d.px = d.x + 6;
+    if (d.tray)
+        d.x += (width * 0.66 - d.x) * 0.01 * force.alpha();
+	if (d.y < 0) force.gravity(.1);
+    d.py = Math.min(height, d.py);
+    if (d.weight <= 1 && !d.dangle)
+		d.y = Math.min(height - 25, a * (d.py + 2) + b * d.y);
+	else
+        d.y = Math.min(height - 5, d.y);
+    if (!(isFinite(d.x) && isFinite(d.y)))
+        console.log(d);
+}
+function dragstart(d) {
+	var x = Math.round(d.x);
+	var y = Math.round(d.y);
+	d.fixed = true;
+	d.ix = x;
+	d.iy = y;
+    if (infence(d) && d.pkg != "fence") {
+        fenced = [d];
+        d.fdx = d.fdy = 0;
+        for (var i in nodes) {
+            var p = nodes[i];
+            if (p != d && p.fixed && infence(p)) {
+                fenced.push(p);
+                p.fdx = p.x - d.x;
+                p.fdy = p.y - d.y;
+            }
+        }
+    }
+}
+function dragend(d) {
+	var x = 10 * Math.round(d.x / 10);
+	var y = 10 * Math.round(d.y / 10);
+	var dx = x - d.x;
+	var dy = y - d.y;
+	if ((d.pkg == "wire" || d.pkg == "fence") && x == d.ix && y == d.iy) {
+		d.fixed = false;
+        fenced = [];
+		force.start();
+		return;
+	}
+	d.ix = x;
+	d.iy = y;
+	if (d.weight > 1 || x <= 0 || y <= 0 || x > width || y > height - 40)
+		d.fixed = false;
+    else if (d.pkg == "dip") {
+        d.x = d.px = x;
+        d.y = d.py = y;
+        d.fixed = true;
+    }
+	else if (dx * dx + dy * dy <= 16) {
+		d.x = d.px = x;
+		d.y = d.py = y;
+		d.fixed = true;
+        if (d.clonable && d.other && d.other.fixed)
+            reproduce(d);
+	}
+	else
+		d.fixed = false;
+    trackfenced();
+    if (!d.fixed) {
+        for (var i in fenced)
+            fenced[i].fixed = false;
+    }
+    fenced = [];
+    force.alpha(newrows.length ? 0.005 : 0.05);
+}
+function reproduce(d) {
+    for (var i in links) {
+        var row = links[i];
+        if (row.pkg && (row.source == d || row.source == d.other)) {
+            d.clonable = d.other.clonable = false;
+            if (row.source == d.other)
+                d = d.other;
+            var e = 3 * Math.random();
+            newrows.push({n: row.n, pkg: row.pkg, x1:
+                          d.x, y1: d.y + e,
+                          x2: d.other.x , y2: d.other.y,
+                          color: row.color,
+                          label: row.label, value: row.value,
+                          description: row.description});
+            return;
+        }
+    }
+}
+//d3.timer(function(){if (!force) startforce(); return true;}, 500);
+var xtext = "BASIC is to computer programming as QWERTY is to typing.\n" +
+	    "\t\t -- Seymour Papert";
+var saved = [];
+function Dump() {
+    var pass = [true, false];
+    xtext = "n,pkg,x1,y1,x2,y2,color,place,label,value,description\n";
+    function arow(row, s, t) {
+        if (!s) s = {x: row.x1, y: row.y1};
+        if (!t) t = {x: row.x2, y: row.y2};
+        var R = Math.round;
+        row.place = postidfromcoords(R(s.x), R(s.y));
+        if (row.pkg != "dip")
+            row.place += '-' + postidfromcoords(R(t.x), R(t.y));
+        var r = [row.n, row.pkg, R(s.x), R(s.y), R(t.x), R(t.y),
+                 row.color, row.place, row.label, row.value, row.description];
+        while (r.length > 0 && !r[r.length-1])
+            r.pop();
+        xtext += r.join(',') + '\n';
+    }
+    for (var p in pass) {
+        for (var i in dips) {
+            var row = dips[i];
+            if ((row.fixed ? true : false) == pass[p])
+                arow(row);
+        }
+        for (var i in links) {
+            var row = links[i];
+            if (row.pkg) {
+                var s = row.source;
+                var t = s.other;
+                if (((s.fixed && t.fixed) ? true : false) == pass[p])
+                    arow(row, s, t);
+            }
+        }
+        xtext += '\n';
+    }
+	saved.push(document.getElementById("dump").textContent);
+	d3.select("#dump").text(xtext);
+}
+</script>
+<div><button onclick="Dump()">Dump</button></div>
+<pre id="dump" rows="35" cols="80">
+(press dump for updated csv)
+</pre>
+</body>
+</html>

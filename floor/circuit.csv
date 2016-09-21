@@ -1,0 +1,798 @@
+n,pkg,x1,y1,x2,y2,color,place,label,value,description
+14,dip,70,70,100,70,gray,B1e3,U101,74HC04,Hex Inverter
+14,dip,70,150,100,150,gray,B1e11,U102,74HC74,Dual D Positive Edge Triggered Flip-Flop with Preset and Clear
+44,dip,60,470,100,470,gray,B1d43,U108,IDT-71016,64K x 16-bit CMOS Static RAM
+20,dip,230,380,260,380,gray,B2e34,U206,74HC563,Octal D-Type Transparent Latch with Inverting Three-State Outputs
+20,dip,230,490,260,490,gray,B2e45,U207,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+20,dip,230,590,260,590,gray,B2e55,U208,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+16,dip,390,300,420,300,gray,B3e26,U304,74HC157,Quad 2-line to 1-line Data Selectors/Multiplexers
+20,dip,390,490,420,490,gray,B3e45,U307,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+20,dip,390,590,420,590,gray,B3e55,U308,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+14,dip,550,60,580,60,gray,B4e2,U401,74HC00,Quad 2-input NAND gate
+16,dip,550,300,580,300,gray,B4e26,U404,74HC138,3-line to 8-line Decoder
+20,dip,550,480,580,480,gray,B4e44,U407,74HC563,Octal D-Type Transparent Latch with Inverting Three-State Outputs
+20,dip,550,590,580,590,gray,B4e55,U408,74HC563,Octal D-Type Transparent Latch with Inverting Three-State Outputs
+14,dip,710,140,740,140,gray,B5e10,U503,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+14,dip,710,220,740,220,gray,B5e18,U504,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+14,dip,710,300,740,300,gray,B5e26,U505,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+14,dip,710,380,740,380,gray,B5e34,U506,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+20,dip,710,460,740,460,gray,B5e42,U507,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+20,dip,710,580,740,580,gray,B5e54,U508,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+14,dip,870,140,900,140,gray,B6e10,U603,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+14,dip,870,220,900,220,gray,B6e18,U604,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+14,dip,870,300,900,300,gray,B6e26,U605,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+14,dip,870,380,900,380,gray,B6e34,U606,74HC51,Dual 2 wide 2-input AND/OR Invert Gate
+20,dip,870,460,900,460,gray,B6e42,U607,74HC563,Octal D-Type Transparent Latch with Inverting Three-State Outputs
+20,dip,870,580,900,580,gray,B6e54,U608,74HC563,Octal D-Type Transparent Latch with Inverting Three-State Outputs
+16,dip,1030,50,1060,50,gray,B7e1,U701,74HC157,Quad 2-line to 1-line Data Selectors/Multiplexers
+16,dip,1030,130,1060,130,gray,B7e9,U702,74HC157,Quad 2-line to 1-line Data Selectors/Multiplexers
+16,dip,1030,210,1060,210,gray,B7e17,U703,74HC157,Quad 2-line to 1-line Data Selectors/Multiplexers
+16,dip,1030,290,1060,290,gray,B7e25,U704,74HC157,Quad 2-line to 1-line Data Selectors/Multiplexers
+20,dip,1030,370,1060,370,gray,B7e33,U705,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+20,dip,1030,480,1060,480,gray,B7e44,U707,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+20,dip,1030,580,1060,580,gray,B7e54,U708,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+16,dip,1190,50,1220,50,gray,B8e1,U801,74HC283,4-Bit Binary Adder With Fast Carry
+16,dip,1190,130,1220,130,gray,B8e9,U802,74HC283,4-Bit Binary Adder With Fast Carry
+16,dip,1190,210,1220,210,gray,B8e17,U803,74HC283,4-Bit Binary Adder With Fast Carry
+16,dip,1190,290,1220,290,gray,B8e25,U804,74HC283,4-Bit Binary Adder With Fast Carry
+20,dip,1190,480,1220,480,gray,B8e44,U807,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+20,dip,1190,580,1220,580,gray,B8e54,U808,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+14,dip,230,60,260,60,gray,B2e2,U201,74HC164,8-bit Parallel-Out Serial Shift Register with Asynchronous Clear
+14,dip,230,140,260,140,gray,B2e10,U202,74HC32,Quad 2-input OR gate
+14,dip,230,220,260,220,gray,B2e18,U203,74HC08,Quad 2-input AND gate
+14,dip,390,60,420,60,gray,B3e2,U301,74HC02,Quad 2-input NOR gate
+14,dip,390,140,420,140,gray,B3e10,U302,74HC00,Quad 2-input NAND gate
+14,dip,550,220,580,220,gray,B4e18,U403,74HC04,Hex Inverter
+14,dip,710,60,740,60,gray,B5e2,U501,74HC00,Quad 2-input NAND gate
+14,dip,1190,380,1220,380,gray,B8e34,U805,74HC00,Quad 2-input NAND gate
+14,dip,70,310,100,310,gray,B1e27,U104,74HC00,Quad 2-input NAND gate
+14,dip,230,300,260,300,gray,B2e26,U204,74HC08,Quad 2-input AND gate
+14,dip,70,390,100,390,gray,B1e35,U105,74HC02,Quad 2-input NOR gate
+14,dip,390,390,420,390,gray,B3e35,U305,74HC74,Dual D Positive Edge Triggered Flip-Flop with Preset and Clear
+14,dip,550,390,580,390,gray,B4e35,U405,74HC74,Dual D Positive Edge Triggered Flip-Flop with Preset and Clear
+14,dip,550,140,580,140,gray,B4e10,U402,74HC32,Quad 2-input OR gate
+14,dip,870,60,900,60,gray,B6e2,U601,74HC32,Quad 2-input OR gate
+14,dip,390,220,420,220,gray,B3e18,U303,74HC00,Quad 2-input NAND gate
+14,dip,70,230,100,230,gray,B1e19,U103,74HC00,Quad 2-input NAND gate
+2,label,30,690,130,690,white,-,RAM,,RAM
+2,label,190,690,300,690,white,-,PC,,Program Counter Register F
+2,label,350,690,460,690,white,-,MAR,,Memory Address Register C
+2,label,510,690,620,690,white,-,RAD,,Register Address Driver
+2,label,830,690,940,690,white,-,A,,Shadow Register A (Negative logic)
+2,label,670,690,780,690,white,-,B,,Shadow Register B (Inverting - Negative logic)
+2,label,990,690,1100,690,white,-,CY,,Carry Result Register
+2,label,1150,690,1260,690,white,-,T,,Temporary Result Register
+2,resistor,1260,490,1290,510,gray,B8j45-,R6,47000
+2,resistor,1260,500,1290,520,gray,B8j46-,R7,47000
+2,resistor,1260,510,1290,530,gray,B8j47-,R8,47000
+2,resistor,1260,520,1290,540,gray,B8j48-,R9,47000
+2,resistor,1260,530,1290,550,gray,B8j49-,R10,47000
+2,resistor,1260,540,1290,560,gray,B8j50-,R11,47000
+2,resistor,1260,550,1290,570,gray,B8j51-,R12,47000
+2,resistor,1260,560,1290,580,gray,B8j52-,R13,47000
+2,resistor,1260,590,1290,610,gray,B8j55-,R15,47000
+2,resistor,1260,600,1290,620,gray,B8j56-,R16,47000
+2,resistor,1260,610,1290,630,gray,B8j57-,R17,47000
+2,resistor,1260,620,1290,640,gray,B8j58-,R18,47000
+2,resistor,1260,630,1290,650,gray,B8j59-,R19,47000
+2,resistor,1260,640,1290,660,gray,B8j60-,R20,47000
+2,resistor,1260,650,1290,670,gray,B8j61-,R21,47000
+2,resistor,1260,660,1290,680,gray,B8j62-,R22,47000
+2,buss,20,40,20,690,blue,-
+2,buss,150,40,150,690,red,-
+2,buss,180,40,180,690,blue,-
+2,buss,310,40,310,690,red,-
+2,buss,340,40,340,690,blue,-
+2,buss,470,40,470,690,red,-
+2,buss,500,40,500,690,blue,-
+2,buss,630,40,630,690,red,-
+2,buss,660,40,660,690,blue,-
+2,buss,790,40,790,690,red,-
+2,buss,820,40,820,690,blue,-
+2,buss,950,40,950,690,red,-
+2,buss,980,40,980,690,blue,-
+2,buss,1110,40,1110,690,red,-
+2,buss,1140,40,1140,690,blue,-
+2,buss,1270,40,1270,690,red,-
+2,buss,1290,480,1290,690,blue,-
+2,wire,20,580,40,580,blue,GND-B1b54
+2,wire,20,210,30,210,blue,GND-B1a17
+2,wire,140,150,150,150,red,B1j11-Vcc
+2,wire,140,580,150,580,red,B1j54-Vcc
+2,wire,50,570,110,580,red,B1c53-B1g54
+2,wire,460,60,470,60,red,B3j2-Vcc
+2,wire,180,570,140,570,blue,GND-B1j53
+2,wire,340,120,350,120,blue,GND-B3a8
+2,wire,340,680,350,680,blue,GND-B3a64
+2,wire,300,590,310,590,red,B2j55-Vcc
+2,wire,820,550,830,550,blue,GND-B6a51
+2,wire,780,580,790,580,red,B5j54-Vcc
+2,wire,940,460,950,460,red,B6j42-Vcc
+2,wire,180,580,190,580,blue,GND-B2a54
+2,wire,620,590,630,590,red,B4j55-Vcc
+2,wire,780,460,790,460,red,B5j42-Vcc
+2,wire,660,670,670,670,blue,GND-B5a63
+2,wire,460,490,470,490,red,B3j45-Vcc
+2,wire,300,490,310,490,red,B2j45-Vcc
+2,wire,180,680,190,680,blue,GND-B2a64
+2,wire,500,570,510,570,blue,GND-B4a53
+2,wire,660,550,670,550,blue,GND-B5a51
+2,wire,460,590,470,590,red,B3j55-Vcc
+2,wire,500,680,510,680,blue,GND-B4a64
+2,wire,620,480,630,480,red,B4j44-Vcc
+2,wire,340,580,350,580,blue,GND-B3a54
+2,wire,1140,570,1150,570,blue,GND-B8a53
+2,wire,1260,580,1270,580,red,B8j54-Vcc
+2,wire,820,670,830,670,blue,GND-B6a63
+2,wire,1260,480,1270,480,red,B8j44-Vcc
+2,wire,940,580,950,580,red,B6j54-Vcc
+2,wire,1140,670,1160,670,blue,GND-B8b63
+2,wire,780,140,790,140,red,B5j10-Vcc
+2,wire,780,220,790,220,red,B5j18-Vcc
+2,wire,780,300,790,300,red,B5j26-Vcc
+2,wire,780,380,790,380,red,B5j34-Vcc
+2,wire,660,200,670,200,blue,GND-B5a16
+2,wire,660,280,670,280,blue,GND-B5a24
+2,wire,660,360,670,360,blue,GND-B5a32
+2,wire,660,440,670,440,blue,GND-B5a40
+2,wire,940,140,950,140,red,B6j10-Vcc
+2,wire,940,220,950,220,red,B6j18-Vcc
+2,wire,940,300,950,300,red,B6j26-Vcc
+2,wire,940,380,950,380,red,B6j34-Vcc
+2,wire,820,200,830,200,blue,GND-B6a16
+2,wire,820,280,830,280,blue,GND-B6a24
+2,wire,820,360,830,360,blue,GND-B6a32
+2,wire,820,440,830,440,blue,GND-B6a40
+2,wire,940,380,950,380,red,B6j34-Vcc
+2,wire,1260,50,1270,50,red,B8j1-Vcc
+2,wire,1260,130,1270,130,red,B8j9-Vcc
+2,wire,1260,210,1270,210,red,B8j17-Vcc
+2,wire,1260,290,1270,290,red,B8j25-Vcc
+2,wire,1140,120,1150,120,blue,GND-B8a8
+2,wire,1140,200,1150,200,blue,GND-B8a16
+2,wire,1140,280,1150,280,blue,GND-B8a24
+2,wire,1140,360,1150,360,blue,GND-B8a32
+2,wire,1100,130,1110,130,red,B7j9-Vcc
+2,wire,1100,210,1110,210,red,B7j17-Vcc
+2,wire,1100,290,1110,290,red,B7j25-Vcc
+2,wire,1100,50,1110,50,red,B7j1-Vcc
+2,wire,980,120,990,120,blue,GND-B7a8
+2,wire,980,200,990,200,blue,GND-B7a16
+2,wire,980,280,990,280,blue,GND-B7a24
+2,wire,980,360,990,360,blue,GND-B7a32
+2,wire,760,550,750,670,gray,B5h51-B5g63
+2,wire,920,550,910,670,gray,B6h51-B6g63
+2,wire,1230,570,1100,570,gray,B8g53-B7j53
+2,wire,270,580,270,680,gray,B2g54-B2g64
+2,wire,430,580,430,680,gray,B3g54-B3g64
+2,wire,660,580,670,580,gray,GND-B5a54
+2,wire,820,580,830,580,gray,GND-B6a54
+2,wire,1160,480,1160,580,gray,B8b44-B8b54
+2,wire,590,570,590,680,gray,B4g53-B4g64
+2,wire,670,300,670,330,gray,B5a26-B5a29
+2,wire,670,140,670,170,gray,B5a10-B5a13
+2,wire,360,490,360,590,gray,B3b45-B3b55
+2,wire,520,480,520,590,gray,B4b44-B4b55
+2,wire,670,220,670,250,gray,B5a18-B5a21
+2,wire,830,140,830,170,gray,B6a10-B6a13
+2,wire,670,380,670,410,gray,B5a34-B5a37
+2,wire,830,300,830,330,gray,B6a26-B6a29
+2,wire,830,220,830,250,gray,B6a18-B6a21
+2,wire,830,380,830,410,gray,B6a34-B6a37
+2,wire,680,140,850,140,red,B5b10-B6c10
+2,wire,680,250,690,330,red,B5b21-B5c29
+2,wire,680,170,690,250,red,B5b13-B5c21
+2,wire,680,330,690,410,red,B5b29-B5c37
+2,wire,840,170,850,250,red,B6b13-B6c21
+2,wire,840,250,850,330,red,B6b21-B6c29
+2,wire,840,330,850,410,red,B6b29-B6c37
+2,wire,200,490,200,590,gray,B2b45-B2b55
+2,wire,820,460,830,460,gray,GND-B6a42
+2,wire,660,460,670,460,gray,GND-B5a42
+2,wire,690,310,700,390,green,B5c27-B5d35
+2,wire,690,230,700,310,green,B5c19-B5d27
+2,wire,690,150,700,230,green,B5c11-B5d19
+2,wire,850,150,860,230,green,B6c11-B6d19
+2,wire,700,150,770,190,green,B5d11-B5i15
+2,wire,780,190,840,150,green,B5j15-B6b11
+2,wire,850,230,860,310,green,B6c19-B6d27
+2,wire,850,310,860,390,green,B6c27-B6d35
+2,wire,910,190,920,270,green,B6g15-B6h23
+2,wire,910,350,920,430,green,B6g31-B6h39
+2,wire,910,270,920,350,green,B6g23-B6h31
+2,wire,760,270,750,190,green,B5h23-B5g15
+2,wire,760,350,750,270,green,B5h31-B5g23
+2,wire,750,350,750,430,green,B5g31-B5g39
+2,wire,860,150,920,190,green,B6d11-B6h15
+2,wire,780,150,790,150,gray,B5j11-Vcc
+2,wire,780,230,790,230,gray,B5j19-Vcc
+2,wire,780,310,790,310,gray,B5j27-Vcc
+2,wire,780,390,790,390,gray,B5j35-Vcc
+2,wire,940,150,950,150,gray,B6j11-Vcc
+2,wire,940,230,950,230,gray,B6j19-Vcc
+2,wire,940,310,950,310,gray,B6j27-Vcc
+2,wire,940,390,950,390,gray,B6j35-Vcc
+2,wire,780,170,790,170,gray,B5j13-Vcc
+2,wire,780,250,790,250,gray,B5j21-Vcc
+2,wire,780,330,790,330,gray,B5j29-Vcc
+2,wire,780,410,790,410,gray,B5j37-Vcc
+2,wire,940,170,950,170,gray,B6j13-Vcc
+2,wire,940,250,950,250,gray,B6j21-Vcc
+2,wire,940,330,950,330,gray,B6j29-Vcc
+2,wire,940,410,950,410,gray,B6j37-Vcc
+2,label,1140,350,1120,370,orange,GND-,CYIN,,Generate Carry-in
+2,wire,1230,200,1180,110,royalblue,B8g16-B8d7
+2,wire,1230,280,1180,190,royalblue,B8g24-B8d15
+2,wire,1230,360,1180,270,royalblue,B8g32-B8d23
+2,wire,1180,50,1180,510,gray,B8d1-B8d47
+2,wire,1180,80,1180,520,black,B8d4-B8d48
+2,wire,1180,130,1170,550,gray,B8d9-B8c51
+2,wire,1180,160,1180,560,black,B8d12-B8d52
+2,wire,1180,210,1180,610,gray,B8d17-B8d57
+2,wire,1180,240,1180,620,black,B8d20-B8d58
+2,wire,1180,290,1160,650,gray,B8d25-B8b61
+2,wire,1180,320,1180,660,black,B8d28-B8d62
+2,wire,1250,110,1180,490,blue,B8i7-B8d45
+2,wire,1250,190,1180,530,blue,B8i15-B8d49
+2,wire,1250,270,1180,590,blue,B8i23-B8d55
+2,wire,1250,350,1180,630,blue,B8i31-B8d59
+2,wire,1240,80,1180,500,green,B8h4-B8d46
+2,wire,1240,160,1180,540,green,B8h12-B8d50
+2,wire,1240,240,1180,600,green,B8h20-B8d56
+2,wire,1240,320,1180,640,green,B8h28-B8d60
+2,wire,700,180,760,500,black,B5d14-B5h46
+2,wire,700,260,750,540,black,B5d22-B5g50
+2,wire,700,340,760,620,black,B5d30-B5h58
+2,wire,700,420,760,660,black,B5d38-B5h62
+2,wire,750,240,750,520,green,B5g20-B5g48
+2,wire,750,470,910,160,blue,B5g43-B6g12
+2,wire,750,500,910,240,blue,B5g46-B6g20
+2,wire,750,590,910,320,blue,B5g55-B6g28
+2,wire,760,160,770,480,green,B5h12-B5i44
+2,wire,760,400,750,640,green,B5h36-B5g60
+2,wire,770,320,760,600,green,B5i28-B5h56
+2,wire,850,180,780,490,gray,B6c14-B5j45
+2,wire,850,260,780,530,gray,B6c22-B5j49
+2,wire,850,340,780,610,gray,B6c30-B5j57
+2,wire,850,420,780,650,gray,B6c38-B5j61
+2,wire,910,400,750,630,blue,B6g36-B5g59
+2,wire,700,160,930,500,black,B5d12-B6i46
+2,wire,930,180,920,470,blue,B6i14-B6h43
+2,wire,770,180,930,480,green,B5i14-B6i44
+2,wire,860,240,930,530,gray,B6d20-B6i49
+2,wire,700,240,930,540,black,B5d20-B6i50
+2,wire,930,260,910,510,blue,B6i22-B6g47
+2,wire,770,260,930,520,green,B5i22-B6i48
+2,wire,700,320,930,620,black,B5d28-B6i58
+2,wire,860,320,940,610,gray,B6d28-B6j57
+2,wire,930,340,910,590,blue,B6i30-B6g55
+2,wire,770,340,930,600,green,B5i30-B6i56
+2,wire,700,400,930,660,black,B5d36-B6i62
+2,wire,860,400,940,650,gray,B6d36-B6j61
+2,wire,930,420,920,630,blue,B6i38-B6h59
+2,wire,770,420,930,640,green,B5i38-B6i60
+2,wire,700,470,830,470,blue,B5d43-B6a43
+2,wire,700,480,830,480,green,B5d44-B6a44
+2,wire,700,490,830,490,gray,B5d45-B6a45
+2,wire,700,500,830,500,black,B5d46-B6a46
+2,wire,1020,380,1080,490,blue,B7d34-B7h45
+2,wire,1240,500,1260,60,green,B8h46-B8j2
+2,wire,1240,510,1170,70,gray,B8h47-B8c3
+2,wire,1090,520,1160,100,black,B7i48-B8b6
+2,wire,1240,490,1250,90,blue,B8h45-B8i5
+2,wire,1020,390,1080,500,green,B7d35-B7h46
+2,wire,1020,400,1080,510,gray,B7d36-B7h47
+2,wire,1020,410,1080,520,black,B7d37-B7h48
+2,wire,700,510,830,510,blue,B5d47-B6a47
+2,wire,700,520,830,520,green,B5d48-B6a48
+2,wire,700,530,830,530,gray,B5d49-B6a49
+2,wire,700,540,830,540,black,B5d50-B6a50
+2,wire,1240,530,1250,170,blue,B8h49-B8i13
+2,wire,1240,540,1260,140,green,B8h50-B8j10
+2,wire,1090,550,1160,150,gray,B7i51-B8b11
+2,wire,1020,450,1080,560,black,B7d41-B7h52
+2,wire,1020,420,1080,530,blue,B7d38-B7h49
+2,wire,1020,430,1080,540,green,B7d39-B7h50
+2,wire,1020,440,1080,550,gray,B7d40-B7h51
+2,wire,1090,560,1160,180,black,B7i52-B8b14
+2,wire,700,590,830,590,blue,B5d55-B6a55
+2,wire,700,600,830,600,green,B5d56-B6a56
+2,wire,700,610,830,610,gray,B5d57-B6a57
+2,wire,700,620,830,620,black,B5d58-B6a58
+2,wire,850,590,1080,590,blue,B6c55-B7h55
+2,wire,850,600,1080,600,green,B6c56-B7h56
+2,wire,1090,610,1170,230,gray,B7i57-B8c19
+2,wire,850,620,1080,620,black,B6c58-B7h58
+2,wire,1240,590,1250,250,blue,B8h55-B8i21
+2,wire,1240,600,1260,220,green,B8h56-B8j18
+2,wire,850,610,1080,610,gray,B6c57-B7h57
+2,wire,1090,620,1160,260,black,B7i58-B8b22
+2,wire,700,630,830,630,blue,B5d59-B6a59
+2,wire,700,640,830,640,green,B5d60-B6a60
+2,wire,700,650,830,650,gray,B5d61-B6a61
+2,wire,700,660,830,660,black,B5d62-B6a62
+2,wire,850,630,1080,630,blue,B6c59-B7h59
+2,wire,850,640,1080,640,green,B6c60-B7h60
+2,wire,850,650,1080,650,gray,B6c61-B7h61
+2,wire,850,660,1080,660,black,B6c62-B7h62
+2,wire,1240,630,1250,330,blue,B8h59-B8i29
+2,wire,1240,640,1260,300,green,B8h60-B8j26
+2,wire,1090,650,1170,310,gray,B7i61-B8c27
+2,wire,1090,660,1160,340,black,B7i62-B8b30
+2,wire,1010,50,1020,130,red,B7c1-B7d9
+2,wire,1240,70,1010,110,green,B8h3-B7c7
+2,wire,1010,80,1250,100,blue,B7c4-B8i6
+2,wire,1240,150,1010,190,green,B8h11-B7c15
+2,wire,1080,60,1070,140,black,B7h2-B7g10
+2,wire,1010,130,1020,210,red,B7c9-B7d17
+2,wire,1010,210,1020,290,red,B7c17-B7d25
+2,wire,1080,140,1070,220,black,B7h10-B7g18
+2,wire,1080,220,1070,300,black,B7h18-B7g26
+2,wire,1070,120,1150,90,black,B7g8-B8a5
+2,wire,1000,160,1250,180,blue,B7b12-B8i14
+2,wire,1000,240,1250,260,blue,B7b20-B8i22
+2,wire,1000,320,1250,340,blue,B7b28-B8i30
+2,wire,1150,170,1070,200,black,B8a13-B7g16
+2,wire,1150,250,1070,280,black,B8a21-B7g24
+2,wire,1150,330,1070,360,black,B8a29-B7g32
+2,wire,1240,230,1010,270,green,B8h19-B7c23
+2,wire,1240,310,1010,350,green,B8h27-B7c31
+2,wire,1160,60,1070,90,gray,B8b2-B7g5
+2,wire,1150,140,1070,170,gray,B8a10-B7g13
+2,wire,1160,220,1070,250,gray,B8b18-B7g21
+2,wire,1160,300,1070,330,gray,B8b26-B7g29
+2,wire,940,200,1010,70,blue,B6j16-B7c3
+2,wire,780,200,1010,100,green,B5j16-B7c6
+2,wire,860,190,1070,80,gray,B6d15-B7g4
+2,wire,690,190,1070,110,black,B5c15-B7g7
+2,wire,940,280,1000,150,blue,B6j24-B7b11
+2,wire,780,280,1010,180,green,B5j24-B7c14
+2,wire,860,270,1070,160,gray,B6d23-B7g12
+2,wire,690,270,1070,190,black,B5c23-B7g15
+2,wire,940,360,1000,230,blue,B6j32-B7b19
+2,wire,770,360,1010,260,green,B5i32-B7c22
+2,wire,860,350,1070,240,gray,B6d31-B7g20
+2,wire,690,350,1070,270,black,B5c31-B7g23
+2,wire,940,440,1000,310,blue,B6j40-B7b27
+2,wire,770,440,990,340,green,B5i40-B7a30
+2,wire,860,430,1070,320,gray,B6d39-B7g28
+2,wire,690,430,1070,350,black,B5c39-B7g31
+2,wire,1100,370,1110,370,red,B7j33-Vcc
+2,wire,980,460,990,460,blue,GND-B7a42
+2,wire,850,470,1010,380,blue,B6c43-B7c34
+2,wire,1010,390,850,480,green,B7c35-B6c44
+2,wire,1010,400,850,490,gray,B7c36-B6c45
+2,wire,1010,410,850,500,black,B7c37-B6c46
+2,wire,850,510,1010,420,blue,B6c47-B7c38
+2,wire,850,520,1010,430,green,B6c48-B7c39
+2,wire,850,530,1010,440,gray,B6c49-B7c40
+2,wire,850,540,1010,450,black,B6c50-B7c41
+2,wire,1010,330,1090,390,green,B7c29-B7i35
+2,wire,1100,400,1090,310,gray,B7j36-B7i27
+2,wire,1070,340,1070,410,black,B7g30-B7g37
+2,bottom,0,750,1280,750,orange,-
+2,wire,1100,480,1110,480,red,B7j44-Vcc
+2,wire,1100,590,1230,590,blue,B7j55-B8g55
+2,wire,1100,600,1230,600,green,B7j56-B8g56
+2,wire,980,670,990,670,black,GND-B7a63
+2,wire,1070,570,1070,670,gray,B7g53-B7g63
+2,wire,1100,610,1230,610,gray,B7j57-B8g57
+2,wire,1100,580,1110,580,red,B7j54-Vcc
+2,wire,980,570,990,570,black,GND-B7a53
+2,wire,1100,620,1230,620,black,B7j58-B8g58
+2,wire,1100,660,1230,660,black,B7j62-B8g62
+2,wire,1100,640,1230,640,green,B7j60-B8g60
+2,wire,1100,630,1230,630,blue,B7j59-B8g59
+2,wire,1100,650,1230,650,gray,B7j61-B8g61
+2,wire,1100,490,1230,490,blue,B7j45-B8g45
+2,wire,1100,500,1230,500,green,B7j46-B8g46
+2,wire,1100,510,1230,510,gray,B7j47-B8g47
+2,wire,1100,520,1230,520,black,B7j48-B8g48
+2,wire,1100,530,1230,530,blue,B7j49-B8g49
+2,wire,1100,540,1230,540,green,B7j50-B8g50
+2,wire,1100,550,1230,550,gray,B7j51-B8g51
+2,wire,1100,560,1230,560,black,B7j52-B8g52
+2,wire,1100,670,1230,670,gray,B7j63-B8g63
+2,wire,990,480,1000,580,gray,B7a44-B7b54
+2,wire,980,370,990,370,gray,GND-B7a33
+2,wire,940,350,1090,440,green,B6j31-B7i40
+2,wire,460,300,470,300,red,B3j26-Vcc
+2,wire,620,300,630,300,red,B4j26-Vcc
+2,wire,300,380,310,380,red,B2j34-Vcc
+2,wire,40,90,40,80,gray,B1b5-B1b4
+2,cap,20,110,30,90,gray,GND-B1a5,C1,10pF,Ceramic Capacitor
+2,cap,20,50,30,70,gray,GND-B1a3,C2,10pF,Ceramic Capacitor
+2,resistor,30,80,60,70,gray,B1a4-B1d3,R02,1100000
+2,xtal,40,70,60,80,silver,B1b3-B1d4,XTL,FS10.0P,10 MHz Crystal
+2,wire,40,110,40,170,gray,B1b7-B1b13
+2,wire,30,160,30,200,gray,B1a12-B1a16
+2,wire,110,170,60,190,blue,B1g13-B1d15
+2,wire,140,160,150,160,gray,B1j12-Vcc
+2,wire,140,190,150,190,gray,B1j15-Vcc
+2,wire,60,150,110,160,gray,B1d11-B1g12
+2,wire,60,100,60,110,gray,B1d6-B1d7
+2,wire,300,110,310,110,gray,B2j7-Vcc
+2,wire,140,200,210,250,gray,B1j16-B2c21
+2,wire,210,60,220,70,gray,B2c2-B2d3
+2,wire,350,60,220,60,gray,B3a2-B2d2
+2,wire,220,160,350,70,gray,B2d12-B3a3
+2,wire,220,190,350,80,gray,B2d15-B3a4
+2,wire,190,110,190,180,gray,B2a7-B2a14
+2,wire,200,100,200,170,gray,B2b6-B2b13
+2,wire,210,90,210,150,gray,B2c5-B2c11
+2,wire,220,80,220,140,gray,B2d4-B2d10
+2,wire,200,210,260,210,green,B2b17-B2f17
+2,wire,220,170,270,160,gray,B2d13-B2g12
+2,resistor,270,210,310,200,gray,B2g17-Vcc,R05,10000
+2,wire,280,100,280,240,gray,B2h6-B2h20
+2,wire,290,250,290,150,gray,B2i21-B2i11
+2,wire,300,230,290,210,gray,B2j19-B2i17
+2,wire,620,50,630,60,red,B4j1-Vcc
+2,wire,500,120,510,120,blue,GND-B4a8
+2,wire,180,280,190,280,blue,GND-B2a24
+2,wire,300,220,310,220,red,B2j18-Vcc
+2,wire,180,200,190,200,blue,GND-B2a16
+2,wire,300,140,310,140,red,B2j10-Vcc
+2,wire,180,120,190,120,blue,GND-B2a8
+2,wire,300,60,310,60,red,B2j2-Vcc
+2,wire,340,370,350,370,blue,GND-B3a33
+2,wire,210,240,1090,460,green,B2c20-B7i42
+2,wire,60,200,210,260,gray,B1d16-B2c22
+2,wire,50,320,210,270,gray,B1c28-B2c23
+2,wire,200,140,220,220,gray,B2b10-B2d18
+2,wire,190,230,190,270,gray,B2a19-B2a23
+2,wire,300,150,350,110,gray,B2j11-B3a7
+2,wire,220,110,350,100,blue,B2d7-B3a6
+2,wire,370,90,430,310,gray,B3c5-B3g27
+2,wire,450,100,450,230,gray,B3i6-B3i19
+2,wire,930,90,780,100,gray,B6i5-B5j6
+2,wire,440,80,440,90,gray,B3h4-B3h5
+2,wire,180,470,190,470,blue,GND-B2a43
+2,wire,500,370,510,370,blue,GND-B4a33
+2,placeholder,50,270,150,300,orange,B1c23-Vcc,IO,,Pull LOW during IO cycles
+2,wire,460,140,470,140,red,B3j10-Vcc
+2,wire,350,200,340,200,blue,B3a16-GND
+2,wire,300,420,370,320,black,B2j38-B3c28
+2,wire,60,240,120,210,gray,B1d20-B1h17
+2,wire,270,170,60,310,gray,B2g13-B1d27
+2,wire,50,190,50,230,gray,B1c15-B1c19
+2,wire,40,520,40,280,green,B1b48-B1b24
+2,wire,340,280,350,280,blue,GND-B3a24
+2,wire,460,220,470,220,red,B3j18-Vcc
+2,wire,300,390,430,330,blue,B2j35-B3g29
+2,wire,50,250,50,260,gray,B1c21-B1c22
+2,wire,370,350,300,410,gray,B3c31-B2j37
+2,wire,1000,480,700,110,green,B7b44-B5d7
+2,wire,430,360,300,400,green,B3g32-B2j36
+2,wire,300,430,430,320,blue,B2j39-B3g28
+2,wire,300,440,430,350,green,B2j40-B3g31
+2,wire,300,450,370,340,gray,B2j41-B3c30
+2,wire,300,460,370,310,black,B2j42-B3c27
+2,wire,210,430,360,640,blue,B2c39-B3b60
+2,wire,220,240,270,470,green,B2d20-B2g43
+2,wire,180,380,190,380,gray,GND-B2a34
+2,wire,210,460,360,670,black,B2c42-B3b63
+2,wire,210,450,360,660,gray,B2c41-B3b62
+2,wire,210,440,360,650,green,B2c40-B3b61
+2,wire,210,420,360,630,black,B2c38-B3b59
+2,wire,210,410,360,620,gray,B2c37-B3b58
+2,wire,210,400,360,610,green,B2c36-B3b57
+2,wire,210,390,360,600,blue,B2c35-B3b56
+2,wire,220,270,270,270,gray,B2d23-B2g23
+2,wire,380,100,510,150,blue,B3d6-B4a11
+2,wire,290,260,350,300,blue,B2i22-B3a26
+2,wire,1080,570,620,200,green,B7h53-B4j16
+2,label,290,470,330,460,green,B2i43-,LEif,,Latch Enable Instruction Fetch
+2,label,50,630,90,610,red,B1c59-,WEmem,,Write Enable Memory - active low
+2,label,550,580,580,580,green,B4e54-B4f54,LEt,,Latch Enable - T register
+2,label,50,520,90,490,red,B1c48-,CSmem,,Chip Select Memory - active low
+2,label,480,210,510,230,green,-B4a19,OEt,,Output Enable T Result
+2,wire,780,60,790,60,red,B5j2-Vcc
+2,wire,660,120,670,120,blue,GND-B5a8
+2,wire,440,240,440,280,gray,B3h20-B3h24
+2,wire,470,150,460,150,gray,Vcc-B3j11
+2,wire,520,180,360,110,gray,B4b14-B3b7
+2,wire,60,250,430,190,gray,B1d21-B3g15
+2,wire,680,50,700,70,gray,B5b1-B5d3
+2,wire,680,70,680,100,gray,B5b3-B5b6
+2,wire,700,60,750,70,gray,B5d2-B5g3
+2,wire,780,70,750,80,gray,B5j3-B5g4
+2,wire,750,90,700,90,gray,B5g5-B5d5
+2,wire,780,110,690,210,gray,B5j7-B5c17
+2,wire,620,220,630,220,red,B4j18-Vcc
+2,wire,500,280,510,280,blue,GND-B4a24
+2,wire,290,440,530,320,green,B2i40-B4c28
+2,wire,290,460,510,300,black,B2i42-B4a26
+2,wire,370,190,280,580,gray,B3c15-B2h54
+2,wire,290,430,540,330,blue,B2i39-B4d29
+2,wire,370,180,590,310,gray,B3c14-B4g27
+2,wire,370,170,370,160,gray,B3c13-B3c12
+2,wire,360,150,300,270,gray,B3b11-B2j23
+2,wire,300,160,350,140,gray,B2j12-B3a10
+2,wire,290,450,520,310,gray,B2i41-B4b27
+2,wire,380,150,510,350,gray,B3d11-B4a31
+2,wire,540,270,530,340,gray,B4d23-B4c30
+2,wire,530,180,530,260,gray,B4c14-B4c22
+2,wire,460,200,510,220,gray,B3j16-B4a18
+2,wire,610,350,600,250,blue,B4i31-B4h21
+2,wire,40,310,110,500,green,B1b27-B1g46
+2,wire,620,360,610,270,black,B4j32-B4i23
+2,wire,600,340,590,230,gray,B4h30-B4g19
+2,wire,600,240,440,580,gray,B4h20-B3h54
+2,wire,750,550,620,260,blue,B5g51-B4j22
+2,wire,140,510,180,510,blue,B1j47-GND
+2,wire,140,520,180,520,blue,B1j48-GND
+2,label,720,130,760,130,orange,-B5h9,SHRT,,Shift result right by 1
+2,wire,470,160,460,160,gray,Vcc-B3j12
+2,wire,620,680,630,670,gray,B4j64-Vcc
+2,wire,500,540,510,540,gray,GND-B4a50
+2,wire,530,500,530,490,gray,B4c46-B4c45
+2,wire,540,500,540,510,gray,B4d46-B4d47
+2,wire,530,510,530,520,gray,B4c47-B4c48
+2,wire,540,520,540,530,gray,B4d48-B4d49
+2,wire,530,530,530,540,gray,B4c49-B4c50
+2,wire,540,540,540,550,gray,B4d50-B4d51
+2,wire,530,550,530,560,gray,B4c51-B4c52
+2,wire,530,600,530,610,gray,B4c56-B4c57
+2,wire,540,610,540,620,gray,B4d57-B4d58
+2,wire,530,620,530,630,gray,B4c58-B4c59
+2,wire,540,600,540,560,gray,B4d56-B4d52
+2,wire,860,70,1240,410,blue,B6d3-B8h37
+2,wire,540,230,670,50,green,B4d19-B5a1
+2,wire,1010,290,1080,430,red,B7c25-B7h39
+2,wire,860,250,1090,450,blue,B6d21-B7i41
+2,wire,1260,380,1270,380,red,B8j34-Vcc
+2,wire,1140,440,1150,440,blue,GND-B8a40
+2,wire,1260,390,1270,390,gray,B8j35-Vcc
+2,wire,1270,430,1260,430,gray,Vcc-B8j39
+2,wire,1100,430,1150,420,gray,B7j39-B8a38
+2,wire,1100,410,1150,410,gray,B7j37-B8a37
+2,wire,1170,350,1170,400,gray,B8c31-B8c36
+2,wire,1230,420,1180,420,gray,B8g38-B8d38
+2,wire,1160,430,1160,390,gray,B8b39-B8b35
+2,wire,620,390,630,390,red,B4j35-Vcc
+2,wire,500,450,510,450,blue,GND-B4a41
+2,wire,620,400,630,400,gray,B4j36-Vcc
+2,wire,460,390,470,390,red,B3j35-Vcc
+2,wire,340,450,350,450,blue,GND-B3a41
+2,wire,180,360,190,360,blue,GND-B2a32
+2,wire,300,300,310,300,red,B2j26-Vcc
+2,wire,140,310,150,310,red,B1j27-Vcc
+2,wire,140,390,150,390,red,B1j35-Vcc
+2,wire,20,450,30,450,blue,GND-B1a41
+2,wire,620,410,630,410,gray,B4j37-Vcc
+2,wire,620,420,630,420,gray,B4j38-Vcc
+2,wire,620,430,630,430,gray,B4j39-Vcc
+2,wire,540,420,590,430,gray,B4d38-B4g39
+2,wire,460,430,470,430,gray,B3j39-Vcc
+2,wire,380,420,430,430,gray,B3d38-B3g39
+2,wire,460,410,470,410,gray,B3j37-Vcc
+2,wire,380,400,430,410,gray,B3d36-B3g37
+2,wire,540,400,590,410,gray,B4d36-B4g37
+2,wire,50,120,120,180,gray,B1c8-B1h14
+2,wire,20,430,30,430,gray,GND-B1a39
+2,wire,30,440,20,440,gray,B1a40-GND
+2,wire,140,430,220,340,red,B1j39-B2d30
+2,wire,140,440,270,430,blue,B1j40-B2g39
+2,wire,140,450,270,440,green,B1j41-B2g40
+2,wire,110,120,270,460,black,B1g8-B2g42
+2,wire,280,340,280,450,gray,B2h30-B2h41
+2,wire,140,420,270,400,green,B1j38-B2g36
+2,wire,140,360,190,350,green,B1j32-B2a31
+2,wire,140,410,270,390,blue,B1j37-B2g35
+2,wire,140,330,190,320,blue,B1j29-B2a28
+2,wire,300,310,280,410,gray,B2j27-B2h37
+2,wire,110,100,270,420,black,B1g6-B2g38
+2,wire,60,340,110,340,gray,B1d30-B1g30
+2,wire,190,80,50,410,black,B2a4-B1c37
+2,wire,220,330,270,360,red,B2d29-B2g32
+2,wire,140,400,220,310,red,B1j36-B2d27
+2,wire,220,300,270,330,red,B2d26-B2g29
+2,wire,130,320,200,110,blue,B1i28-B2b7
+2,wire,60,350,110,370,gray,B1d31-B1g33
+2,wire,350,390,50,360,gray,B3a35-B1c32
+2,wire,130,350,270,100,green,B1i31-B2g6
+2,wire,110,290,40,630,green,B1g25-B1b59
+2,wire,380,440,370,490,gray,B3d40-B3c45
+2,wire,430,450,210,490,gray,B3g41-B2c45
+2,wire,540,440,530,480,gray,B4d40-B4c44
+2,wire,460,420,510,410,green,B3j38-B4a37
+2,wire,200,80,350,260,black,B2b4-B3a22
+2,wire,40,360,40,400,black,B1b32-B1b36
+2,wire,60,390,510,390,black,B1d35-B4a35
+2,wire,380,410,430,420,green,B3d37-B3g38
+2,wire,130,200,360,410,green,B1i16-B3b37
+2,wire,440,340,530,640,blue,B3h30-B4c60
+2,wire,440,370,530,650,green,B3h33-B4c61
+2,wire,380,330,530,670,black,B3d29-B4c63
+2,wire,380,360,530,660,gray,B3d32-B4c62
+2,wire,460,670,600,670,black,B3j63-B4h63
+2,wire,460,660,600,660,gray,B3j62-B4h62
+2,wire,460,650,600,650,green,B3j61-B4h61
+2,wire,460,640,600,640,blue,B3j60-B4h60
+2,wire,300,670,440,670,black,B2j63-B3h63
+2,wire,460,630,600,630,black,B3j59-B4h59
+2,wire,460,620,600,620,gray,B3j58-B4h58
+2,wire,460,610,600,610,green,B3j57-B4h57
+2,wire,460,600,600,600,blue,B3j56-B4h56
+2,wire,300,630,440,630,black,B2j59-B3h59
+2,wire,460,530,600,520,black,B3j49-B4h48
+2,wire,300,660,440,660,gray,B2j62-B3h62
+2,wire,300,620,440,620,gray,B2j58-B3h58
+2,wire,300,610,440,610,green,B2j57-B3h57
+2,wire,300,650,440,650,green,B2j61-B3h61
+2,wire,300,510,440,510,green,B2j47-B3h47
+2,wire,300,520,440,520,gray,B2j48-B3h48
+2,wire,300,600,440,600,blue,B2j56-B3h56
+2,wire,300,640,440,640,blue,B2j60-B3h60
+2,wire,460,540,600,530,blue,B3j50-B4h49
+2,wire,300,540,440,540,blue,B2j50-B3h50
+2,wire,460,500,600,490,blue,B3j46-B4h45
+2,wire,300,500,440,500,blue,B2j46-B3h46
+2,wire,460,510,600,500,green,B3j47-B4h46
+2,wire,300,550,440,550,green,B2j51-B3h51
+2,wire,460,550,600,540,green,B3j51-B4h50
+2,wire,460,520,600,510,gray,B3j48-B4h47
+2,wire,300,560,440,560,gray,B2j52-B3h52
+2,wire,460,560,600,550,gray,B3j52-B4h51
+2,wire,300,530,440,530,black,B2j49-B3h49
+2,wire,460,570,600,560,black,B3j53-B4h52
+2,wire,300,570,440,570,black,B2j53-B3h53
+2,wire,220,500,350,500,blue,B2d46-B3a46
+2,wire,220,510,350,510,green,B2d47-B3a47
+2,wire,380,670,670,660,black,B3d63-B5a62
+2,wire,220,520,350,520,gray,B2d48-B3a48
+2,wire,380,630,670,620,black,B3d59-B5a58
+2,wire,220,630,350,630,black,B2d59-B3a59
+2,wire,220,670,350,670,black,B2d63-B3a63
+2,wire,220,570,350,570,black,B2d53-B3a53
+2,wire,220,530,350,530,black,B2d49-B3a49
+2,wire,380,530,670,500,black,B3d49-B5a46
+2,wire,380,570,670,540,black,B3d53-B5a50
+2,wire,380,520,670,490,gray,B3d48-B5a45
+2,wire,220,560,350,560,gray,B2d52-B3a52
+2,wire,380,560,670,530,gray,B3d52-B5a49
+2,wire,220,620,350,620,gray,B2d58-B3a58
+2,wire,380,620,670,610,gray,B3d58-B5a57
+2,wire,220,660,350,660,gray,B2d62-B3a62
+2,wire,380,660,670,650,gray,B3d62-B5a61
+2,wire,220,550,350,550,green,B2d51-B3a51
+2,wire,220,610,350,610,green,B2d57-B3a57
+2,wire,220,650,350,650,green,B2d61-B3a61
+2,wire,380,510,670,480,green,B3d47-B5a44
+2,wire,380,550,670,520,green,B3d51-B5a48
+2,wire,380,610,670,600,green,B3d57-B5a56
+2,wire,380,650,670,640,green,B3d61-B5a60
+2,wire,220,540,350,540,blue,B2d50-B3a50
+2,wire,220,600,350,600,blue,B2d56-B3a56
+2,wire,220,640,350,640,blue,B2d60-B3a60
+2,wire,380,500,670,470,blue,B3d46-B5a43
+2,wire,380,540,670,510,blue,B3d50-B5a47
+2,wire,380,600,670,590,blue,B3d56-B5a55
+2,wire,380,640,670,630,blue,B3d60-B5a59
+2,wire,140,640,280,640,blue,B1j60-B2h60
+2,wire,140,650,280,650,green,B1j61-B2h61
+2,wire,140,670,280,670,black,B1j63-B2h63
+2,wire,140,660,280,660,gray,B1j62-B2h62
+2,wire,50,510,270,570,black,B1c47-B2g53
+2,wire,50,470,280,530,black,B1c43-B2h49
+2,wire,50,670,280,630,black,B1c63-B2h59
+2,wire,50,660,280,620,gray,B1c62-B2h58
+2,wire,50,500,270,560,gray,B1c46-B2g52
+2,wire,140,490,270,520,gray,B1j45-B2g48
+2,wire,50,650,280,610,green,B1c61-B2h57
+2,wire,50,490,270,550,green,B1c45-B2g51
+2,wire,140,480,270,510,green,B1j44-B2g47
+2,wire,50,640,280,600,blue,B1c60-B2h56
+2,wire,50,480,270,540,blue,B1c44-B2g50
+2,wire,140,470,270,500,blue,B1j43-B2g46
+2,wire,50,590,190,600,blue,B1c55-B2a56
+2,wire,140,600,190,650,green,B1j56-B2a61
+2,wire,140,620,190,670,black,B1j58-B2a63
+2,wire,140,610,190,660,gray,B1j57-B2a62
+2,wire,50,620,190,630,black,B1c58-B2a59
+2,wire,50,560,190,570,black,B1c52-B2a53
+2,wire,140,560,190,530,black,B1j52-B2a49
+2,wire,50,610,190,620,gray,B1c57-B2a58
+2,wire,50,550,190,560,gray,B1c51-B2a52
+2,wire,140,550,190,520,gray,B1j51-B2a48
+2,wire,50,600,190,610,green,B1c56-B2a57
+2,wire,50,540,190,550,green,B1c50-B2a51
+2,wire,140,540,190,510,green,B1j50-B2a47
+2,wire,140,590,190,640,blue,B1j55-B2a60
+2,wire,50,530,190,540,blue,B1c49-B2a50
+2,wire,140,530,190,500,blue,B1j49-B2a46
+2,wire,120,170,270,120,blue,B1h13-B2g8
+2,wire,300,190,310,190,gray,B2j15-Vcc
+2,wire,290,190,290,180,gray,B2i15-B2i14
+2,wire,20,370,30,370,blue,GND-B1a33
+2,wire,620,140,630,140,red,B4j10-Vcc
+2,wire,500,200,510,200,blue,GND-B4a16
+2,wire,220,100,510,170,green,B2d6-B4a13
+2,wire,380,300,510,160,black,B3d26-B4a12
+2,wire,620,150,630,150,gray,B4j11-Vcc
+2,wire,610,150,610,160,gray,B4i11-B4i12
+2,wire,510,140,220,90,red,B4a10-B2d5
+2,wire,610,180,610,190,gray,B4i14-B4i15
+2,wire,460,180,510,190,black,B3j14-B4a15
+2,wire,990,60,990,90,royalblue,B7a2-B7a5
+2,wire,1000,140,1000,90,royalblue,B7b10-B7b5
+2,wire,990,140,990,170,royalblue,B7a10-B7a13
+2,wire,1000,170,1000,220,royalblue,B7b13-B7b18
+2,wire,990,250,990,220,royalblue,B7a21-B7a18
+2,wire,1000,250,1000,300,royalblue,B7b21-B7b26
+2,wire,1010,300,1070,380,royalblue,B7c26-B7g34
+2,wire,1100,230,1100,260,royalblue,B7j19-B7j22
+2,wire,1090,180,1090,230,royalblue,B7i14-B7i19
+2,wire,1100,150,1100,180,royalblue,B7j11-B7j14
+2,wire,1090,100,1090,150,royalblue,B7i6-B7i11
+2,wire,1100,70,1100,100,royalblue,B7j3-B7j6
+2,wire,1020,220,1070,230,royalblue,B7d18-B7g19
+2,wire,540,150,590,210,blue,B4d11-B4g17
+2,wire,620,210,670,210,blue,B4j17-B5a17
+2,wire,710,210,1170,380,blue,B5e17-B8c34
+2,wire,1010,490,1230,470,blue,B7c45-B8g43
+2,wire,1260,120,1260,470,blue,B8j8-B8j43
+2,label,550,460,580,460,blue,B4e42-B4f42,LEa,,Latch enable register A
+2,label,550,380,580,380,black,B4e34-B4f34,LEb,,Latch enable register B
+2,label,550,210,580,210,blue,B4e17-B4f17,PHI4,,Phase 4
+2,wire,940,60,950,60,red,B6j2-Vcc
+2,wire,780,80,840,80,blue,B5j4-B6b4
+2,wire,780,120,1070,60,black,B5j8-B7g2
+2,wire,530,170,860,60,gray,B4c13-B6d2
+2,wire,590,180,590,170,gray,B4g14-B4g13
+2,wire,830,120,820,120,blue,B6a8-GND
+2,wire,940,100,950,100,gray,B6j6-Vcc
+2,wire,940,80,1000,70,blue,B6j4-B7b3
+2,wire,940,70,1090,430,red,B6j3-B7i39
+2,wire,940,110,950,110,gray,B6j7-Vcc
+2,wire,820,90,830,90,gray,GND-B6a5
+2,wire,820,100,830,100,gray,GND-B6a6
+2,wire,700,80,1150,480,blue,B5d4-B8a44
+2,wire,1020,570,220,280,black,B7d53-B2d24
+2,wire,220,260,430,120,red,B2d22-B3g8
+2,resistor,440,110,470,130,gray,B3h7-Vcc,R03,1000
+2,label,320,210,360,220,orange,-B3b18,STEP,,Stop in PHI1 if low or PHI5 if high
+2,wire,60,180,430,250,red,B1d14-B3g21
+2,wire,510,250,380,250,blue,B4a21-B3d21
+2,wire,360,260,430,400,black,B3b22-B3g36
+2,wire,300,240,350,230,gray,B2j20-B3a19
+2,resistor,340,250,370,220,gray,GND-B3c18,R01,1000
+2,wire,510,240,380,220,green,B4a20-B3d18
+2,wire,380,240,430,260,gray,B3d20-B3g22
+2,wire,380,270,430,270,gray,B3d23-B3g23
+2,label,430,110,490,100,orange,B3g7-,RUN,,RUN - pull low to stop
+2,wire,140,230,150,230,red,B1j19-Vcc
+2,wire,20,290,30,290,blue,GND-B1a25
+2,label,70,220,110,250,orange,B1e18-B1g21,DEP,,Deposit instruction - active low
+2,wire,110,240,60,330,blue,B1g20-B1d29
+2,resistor,120,250,150,250,gray,B1h21-Vcc,R034,1000
+2,wire,120,280,120,270,gray,B1h24-B1h23
+2,wire,110,270,110,260,gray,B1g23-B1g22
+2,wire,130,130,270,350,black,B1i9-B2g31
+2,wire,130,110,270,320,black,B1i7-B2g28
+2,wire,1090,420,1230,400,blue,B7i38-B8g36
+2,wire,620,280,910,550,red,B4j24-B6g51
+2,label,460,70,490,70,blue,B3j3-,NLEif,,Instruction fetch latch - active low - to panel logic
+2,wire,140,70,150,70,red,B1j3-Vcc
+2,wire,20,130,30,130,blue,GND-B1a9
+2,wire,200,240,430,90,green,B2b20-B3g5
+2,wire,110,70,110,80,gray,B1g3-B1g4
+2,wire,300,280,590,150,green,B2j24-B4g11
+2,cap,620,170,660,170,gray,B4j13-GND,C3,47pF,Ceramic Capacitor
+2,wire,1010,630,1150,620,blue,B7c59-B8a58
+2,wire,1010,640,1150,630,green,B7c60-B8a59
+2,wire,1010,660,1150,650,black,B7c62-B8a61
+2,wire,1010,650,1150,640,gray,B7c61-B8a60
+2,wire,1010,620,1150,610,black,B7c58-B8a57
+2,wire,1010,610,1150,600,gray,B7c57-B8a56
+2,wire,1010,600,1150,590,green,B7c56-B8a55
+2,wire,1010,590,1150,560,blue,B7c55-B8a52
+2,wire,1010,560,1150,550,black,B7c52-B8a51
+2,wire,1010,550,1150,540,gray,B7c51-B8a50
+2,wire,1010,530,1150,520,blue,B7c49-B8a48
+2,wire,1010,540,1150,530,green,B7c50-B8a49
+2,wire,1010,520,1150,510,black,B7c48-B8a47
+2,wire,1010,510,1150,500,gray,B7c47-B8a46
+2,wire,1010,500,1150,490,green,B7c46-B8a45
+

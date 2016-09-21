@@ -1,0 +1,25 @@
+n,pkg,x1,y1,x2,y2,color,label,value,description
+14,dip,640,710,670,710,gray,U032,74HC32,Quad 2-input OR gate
+20,dip,720,710,750,710,gray,U0563,74HC563,Octal D-Type Transparent Latch with Inverting Three-State Outputs
+16,dip,820,710,850,710,gray,U0138,74HC138,3-line to 8-line Decoder
+14,dip,1110,720,1140,720,gray,U0164,74HC164,8-bit Parallel-Out Serial Shift Register with Asynchronous Clear
+14,dip,1120,720,1150,720,gray,U000,74HC00,Quad 2-input NAND gate
+14,dip,870,720,900,720,gray,U008,74HC08,Quad 2-input AND gate
+14,dip,880,720,910,720,gray,U002,74HC02,Quad 2-input NOR gate
+14,dip,920,720,950,720,gray,U074,74HC74,Dual D Positive Edge Triggered Flip-Flop with Preset and Clear
+16,dip,970,720,1000,720,gray,U0157,74HC157,Quad 2-line to 1-line Data Selectors/Multiplexers
+20,dip,1030,720,1060,720,gray,U0573,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+2,frustrator,733,715,800,735,orange,F0,1100000,What is this thing?
+2,wire,400,715,467,735,red
+2,wire,427,715,494,735,blue
+2,wire,450,715,517,735,green
+2,wire,474,715,542,735,black
+2,wire,499,715,566,735,gray
+2,resistor,524,715,591,735,gray,R01,110
+2,resistor,549,715,616,735,gray,R02,330
+2,resistor,573,715,640,735,gray,R03,1000
+2,resistor,598,715,666,735,gray,R04,4700
+2,resistor,624,715,692,735,gray,R05,10000
+2,resistor,651,715,718,735,gray,R06,47000
+2,cap,686,715,753,735,gray,C0,5 pF,Ceramic Capacitor
+2,fence,777,715,844,735,gold

@@ -1,0 +1,80 @@
+n,pkg,x1,y1,x2,y2,color,place,label,value,description
+14,dip,70,70,100,70,gray,B9f3,U901,74HC10,Triple 3-input NAND gate
+14,dip,70,150,100,150,gray,B9f11,U902,74HC00,Quad 2-input NAND gate
+14,dip,70,230,100,230,gray,B9f19,U903,74HC00,Quad 2-input NAND gate
+20,dip,70,310,100,310,gray,B9f27,U905,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+20,dip,70,410,100,410,gray,B9f37,U904,74HC573,Octal D-Type Transparent Latch with Three-State Outputs
+2,buss,150,40,150,520,red,-
+2,buss,20,520,20,40,blue,-
+2,buss,310,40,310,520,red,-
+2,buss,180,40,180,520,blue,-
+2,buss,170,590,900,590,blue,-
+2,resistor,50,180,50,220,gray,B9h14-B9h18,R901,10000
+2,resistor,120,160,150,160,gray,B9c12-Vcc,R902,10000
+2,resistor,120,190,150,190,gray,B9c15-Vcc,R903,10000
+2,resistor,120,240,150,240,gray,B9c20-Vcc,R904,10000
+2,resistor,120,270,150,270,gray,B9c23-Vcc,R905,10000
+2,resistor,40,230,40,300,gray,B9i19-B9i26,R906,10000
+2,resistor,50,260,50,300,gray,B9h22-B9h26,R907,10000
+2,resistor,40,150,40,220,gray,B9i11-B9i18,R908,10000
+2,resistor,110,510,70,510,gray,B9d47-B9f47,R909,100
+2,wire,40,510,150,590,red,B9i47-
+2,wire,20,500,30,500,blue,GND-B9j46
+2,wire,20,510,170,590,black,GND-
+2,wire,140,410,150,410,red,B9a37-Vcc
+2,wire,140,310,150,310,red,B9a27-Vcc
+2,wire,140,230,150,230,red,B9a19-Vcc
+2,wire,140,150,150,150,red,B9a11-Vcc
+2,wire,140,70,150,70,red,B9a3-Vcc
+2,wire,20,400,30,400,blue,GND-B9j36
+2,wire,20,290,30,290,blue,GND-B9j25
+2,wire,20,210,30,210,blue,GND-B9j17
+2,wire,30,130,20,130,blue,B9j9-GND
+2,wire,60,260,530,570,red,B9g22-
+2,wire,110,190,310,570,green,B9d15-
+2,wire,110,270,470,570,black,B9d23-
+2,wire,60,280,110,280,gray,B9g24-B9d24
+2,wire,60,270,110,290,gray,B9g23-B9d25
+2,wire,60,250,110,250,gray,B9g21-B9d21
+2,wire,60,240,110,260,gray,B9g20-B9d22
+2,wire,60,200,110,200,gray,B9g16-B9d16
+2,wire,60,190,110,210,gray,B9g15-B9d17
+2,wire,60,170,110,170,gray,B9g13-B9d13
+2,wire,60,160,110,180,gray,B9g12-B9d14
+2,wire,140,510,150,510,gray,B9a47-Vcc
+2,wire,140,500,150,500,gray,B9a46-Vcc
+2,wire,140,400,150,400,gray,B9a36-Vcc
+2,wire,390,570,110,240,gray,-B9d20
+2,switch,500,581,530,570,gray,-,NDEP,,Deposit inactive
+2,switch,470,570,500,581,gray,-,DEP,,Deposit
+2,switch,420,580,450,570,gray,-,S0,,Step phase 1
+2,switch,390,570,420,580,gray,-,STEP,,Step phase 5
+2,switch,340,580,370,570,gray,-,EXEC,,Execute
+2,switch,310,570,340,580,gray,-,EXAM,,Examine
+2,switch,260,580,290,570,gray,-,RUN,,Run
+2,switch,230,570,260,580,gray,-,STOP,,Stop
+2,wire,340,590,340,580,blue,-
+2,wire,500,590,500,581,blue,-
+2,wire,420,590,420,580,blue,-
+2,wire,260,580,260,590,blue,-
+2,wire,450,570,60,230,red,-B9g19
+2,wire,110,160,230,570,blue,B9d12-
+2,wire,60,180,370,570,red,B9g14-
+2,wire,60,150,290,570,red,B9g11-
+2,wire,30,80,30,170,blue,B9j4-B9j13
+2,wire,40,110,30,200,green,B9i7-B9j16
+2,wire,140,110,140,290,black,B9a7-B9a25
+2,wire,110,90,110,100,gray,B9d5-B9d6
+2,wire,110,130,60,310,gray,B9d9-B9g27
+2,wire,60,80,60,90,gray,B9g4-B9g5
+2,wire,50,70,50,80,gray,B9h3-B9h4
+2,wire,10,100,50,110,gray,-B9h7
+2,wire,10,230,50,240,gray,-B9h20
+2,wire,70,220,100,220,gray,B9f18-B9e18
+2,wire,110,220,110,230,gray,B9d18-B9d19
+2,wire,70,300,100,300,gray,B9f26-B9e26
+2,wire,140,300,150,300,gray,B9a26-Vcc
+2,wire,60,120,110,120,gray,B9g8-B9d8
+2,wire,10,70,120,80,blue,-B9c4
+2,wire,10,160,50,170,green,-B9h13
+2,wire,10,120,120,130,blue,-B9c9
